@@ -5,8 +5,8 @@ import Link from 'next/link';
 export default async function Header() {
   const session = await auth();
   return (
-    <header className='px-5 py-3 bg-white shadow-sm '>
-      <nav>
+    <header className='px-5 py-3 bg-white shadow-sm font-work-sans'>
+      <nav className='flex justify-between items-center'>
         <Link href='/'>
           <Image
             src='/logo.png'
@@ -20,6 +20,7 @@ export default async function Header() {
             <>
               <Link href='/startup/create'>
                 <span>Create</span>
+                {/* <BadgePlus className='size-6 sm:hidden' /> */}
               </Link>
               <button
                 onClick={async () => {
