@@ -1,4 +1,5 @@
 import { auth, signIn, signOut } from '@/auth';
+import { BadgePlus } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -20,7 +21,7 @@ export default async function Header() {
             <>
               <Link href='/startup/create'>
                 <span>Create</span>
-                {/* <BadgePlus className='size-6 sm:hidden' /> */}
+                <BadgePlus className='size-6 sm:hidden' />
               </Link>
               <button
                 onClick={async () => {
